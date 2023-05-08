@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <button onclick="downloadFile()">下载</button>
+
+    <script>
+        function downloadFile() {
+            var link = document.createElement('a');
+            link.href = 'static/lol.jpg'; // 使用相对路径来访问图片
+            link.download = 'lol图片';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
